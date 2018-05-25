@@ -111,7 +111,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Exception.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ReadFile.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Exception.hpp" />
+    <ClInclude Include="ReadFile.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
