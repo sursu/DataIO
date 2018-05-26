@@ -10,7 +10,9 @@
             "args": [
                 "-g",
                 "-O3",
-                "main.cpp"
+                "main.cpp",
+                "-o",
+                "main.exe"
             ],
             "group": {
                 "kind": "build",
@@ -24,10 +26,12 @@
             "args": [
                 "-g",
                 "-O3",
-                "main.cpp"
+                "main.cpp",
+                "-o",
+                "main.exe"  
             ],
             "group": {
-                "kind": "build",
+                "kind": "test",
                 "isDefault": true
             },
             "problemMatcher": [
