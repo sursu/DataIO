@@ -20,7 +20,7 @@
             },
             "presentation": {
                 "reveal": "silent",
-                "panel": "new"
+                // "panel": "new"
             }
         },
         {
@@ -40,7 +40,7 @@
             },
             "presentation": {
                 "reveal": "silent",
-                "panel": "new"
+                // "panel": "new"
             },
             "problemMatcher": [
                 "$gcc"
