@@ -17,6 +17,5 @@ int main()
 	auto end = std::chrono::high_resolution_clock::now();
 	cout << "Computation time: " << std::chrono::duration<double, milli>(end - start).count() << "ms\n";
 
-    // system("pause");
     return 0;
 }
