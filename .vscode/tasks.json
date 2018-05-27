@@ -15,7 +15,7 @@
                 "main.exe"
             ],
             "group": {
-                "kind": "build",
+                "kind": "test",
                 "isDefault": true
             },
             "presentation": {
@@ -45,6 +45,37 @@
             "problemMatcher": [
                 "$gcc"
             ]
+        },
+        {
+            "label": "cmake",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/build"
+            },
+            "command": "cmake",
+            "args": [
+                "${workspaceRoot}",
+                "-G",
+                "MinGW Makefiles",
+                "-DCMAKE_BUILD_TYPE=Debug .."
+            ],
+        },
+        {
+            "label": "make",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/build"
+            },
+            "command": "mingw32-make",
+            "args": [
+                "-j",
+                "8"
+            ],
+            "dependsOn":["cmake"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }

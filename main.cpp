@@ -7,9 +7,6 @@
 #include <fstream>
 
 #include "ReadFile.hpp"
-#include "ReadFile.cpp"
-#include "Exception.hpp"
-#include "Exception.cpp"
 
 using namespace std;
 
@@ -20,7 +17,8 @@ int main()
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	string filename = "/home/sandu/bmetric/C++ Projects/NoSessions/sessions.csv";
+	// string filename = "/home/sandu/bmetric/C++ Projects/NoSessions/sessions.csv";
+	string filename = "../covtype.data";
 
 	vector<vector<long int>> Table; // future destination Table
 
@@ -43,6 +41,8 @@ int main()
 			cout << el << '\t';
 		cout << endl;
 	}
+
+	cout << "Check" << endl;
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -95,7 +95,7 @@ int main()
 	// Write the table to file .csv (BINARY)
 	cout << "Writing the table to file..." << endl;
 
-	ofstream ofile("/home/sandu/bmetric/C++ Projects/DataIO/sessions_numbered.csv", std::ios::binary);
+	ofstream ofile("output.csv", std::ios::binary);
 	assert(ofile.is_open());
 
 	size_t nCols = Table[0].size();
