@@ -1,7 +1,7 @@
 {
     "configurations": [
         {
-            "name": "Win32",
+            "name": "Linux",
             "browse": {
                 "path": [
                     "${workspaceFolder}"
@@ -10,16 +10,15 @@
             },
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:/Program Files (x86)/Windows Kits/10/Include/10.0.10240.0/ucrt"
+                "/usr/include/c++/7",
+                "/usr/include/c++/7",
+                "/usr/include/c++/7"
             ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
-            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang",
             "cStandard": "c11",
             "cppStandard": "c++17",
-            "intelliSenseMode": "msvc-x64"
+            "intelliSenseMode": "clang-x64"
         }
     ],
     "version": 4

@@ -8,3 +8,6 @@ build/
 *.exe
 *.csv
 *.data
+
+# VSCode Files
+.vscode/c_cpp_properties.json
