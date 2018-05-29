@@ -58,7 +58,7 @@
                 "-G",
                 // "MinGW Makefiles",
                 "Unix Makefiles",
-                "-DCMAKE_BUILD_TYPE=Debug .."
+                "-DCMAKE_BUILD_TYPE=Release .."
             ],
         },
         {
