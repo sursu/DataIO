@@ -8,7 +8,7 @@ message("CMAKE_BUILD_TYPE is ${CMAKE_BUILD_TYPE}")
 include(CTest)
 enable_testing()
 
-add_executable(DataIO main.cpp ReadFile.cpp Exception.cpp WriteFile.cpp Meta.cpp)
+add_executable(DataIO main.cpp Exception.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

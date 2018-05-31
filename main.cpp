@@ -6,9 +6,10 @@
 #include <cassert>
 #include <fstream>
 
-#include "ReadFile.hpp"
-#include "WriteFile.hpp"
-#include "Meta.hpp"
+// #include "ReadFile.hpp"
+// #include "WriteFile.hpp"
+// #include "Meta.hpp"
+#include "iodata.hpp"
 
 using namespace std;
 
@@ -19,33 +20,25 @@ int main()
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	string filename = "/home/sandu/bmetric/C++ Projects/NoSessions/sessions.csv";
-	// string filename = "../covtype.data";
+	// string filename = "/home/sandu/bmetric/C++ Projects/NoSessions/sessions.csv";
+	string filename = "../covtype.data";
 
-	vector<vector<long int>> Table; // future destination Table
-
-
-	// Read data from filename to Table in an exception safely manner ////////////////////////////
-	try {
-		ReadFile(filename, Table);
-	}
-	catch (Exception& error) {
-		error.PrintDebug();
-		std::cout << "Couldn't open the file\n";
-		std::cout << "Give alternative location\n";
-		std::cin >> filename;
-		ReadFile(filename, Table);
-	}
+	// vector<vector<long int>> Table; // future destination Table
+	
+	File <vector<vector<long int>>> Table(filename);
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	// Display the first few observations
-	head(Table);
-	
+	Table.head();
+
+	// Display dimensions of the object (could be multidimensional)
+	Table.dim();
 
 	//------------------------------------------------------------------------------------------------
 
-	WriteFile("output.csv", Table);
+	// Write to file
+	Table.WriteFile("output.csv");
 
 
     // Stop clock 

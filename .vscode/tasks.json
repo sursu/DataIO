@@ -56,8 +56,8 @@
             "args": [
                 "${workspaceRoot}",
                 "-G",
-                // "MinGW Makefiles",
-                "Unix Makefiles",
+                "MinGW Makefiles",
+                // "Unix Makefiles",
                 "-DCMAKE_BUILD_TYPE=Release .."
             ],
         },
@@ -67,8 +67,8 @@
             "options": {
                 "cwd": "${workspaceRoot}/build"
             },
-            // "command": "mingw32-make",
-            "command": "make",
+            "command": "mingw32-make",
+            // "command": "make",
             "args": [
                 "-j",
                 "8"
