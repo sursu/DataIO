@@ -26,7 +26,7 @@ public:
     // make a decorator for it to be verbose
 
     void dim();
-    // void len();
+    void len();
 
     void head(size_t H=5);
     // void tail(size_t i);
@@ -86,7 +86,7 @@ File<T>::File(const std::string& fileName) {
 	size = std::count(str.begin(), str.end(), ',') + 1;
 
 	// Add to private
-	mRows = size;
+	mCols = size;
 
 	// Declare vector num to collect the numeric and categoric data
 	std::vector<long int> row(size);
@@ -113,6 +113,10 @@ File<T>::File(const std::string& fileName) {
 
 		mData.push_back(row);
 	}
+
+	// while ( getline (myfileO,line) ) {
+	// 	cout << line << '\n'; 
+	// }
 
 	file.close();
 	std::cout << "File read successfully\n";
@@ -168,6 +172,12 @@ void File<T>::WriteFile(const std::string& fileName) {
 template <typename T>
 void File<T>::dim() {
     std::cout << "Dimensions: " << mRows << "\t" << mData.size() << std::endl;;
+}
+
+// Method to get the length of the object
+template <typename T>
+void File<T>::len() {
+    std::cout << mData.size() << std::endl;;
 }
 
 // Method to get number of rows of matrix
